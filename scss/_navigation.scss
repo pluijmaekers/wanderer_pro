@@ -1,0 +1,82 @@
+$accent: #8d2609;
+
+.nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 10;
+    ul {
+        list-style: none;
+        display: flex;
+    }
+    ul li {
+        padding: 0 10px;
+    }
+    ul li a {
+        padding-bottom: 2px;
+    }
+}
+
+.nav .menu-btn {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 1.5%;
+    right: 2%;
+    font-size: 1.2em;
+    z-index: 20;
+    color: $accent;
+    @media (max-width: 600px) {
+        font-size: 1em;
+        margin-top: 3%;
+        right: 4%;
+    }
+}
+
+.menu-btn:hover {
+    opacity: 0.7;
+}
+
+.nav ul.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: whitesmoke;
+    width: 40%;
+    height: 100vh;
+    transform: translateY(-1500px);
+    padding: 2em;
+    transition: transform 350ms ease-in-out;
+    z-index: 15;
+    @media (max-width: 900px) {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.nav ul.menu.show {
+    transform: translateY(0);
+}
+
+.nav ul.menu li {
+    padding: 10px;
+    border-bottom: 2px solid $accent;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.nav ul.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: $accent;
+    &:hover {
+        text-shadow: 0 0 18px $accent;
+    }
+}

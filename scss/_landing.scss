@@ -1,0 +1,141 @@
+$accent: #8d2609;
+
+.button {
+    z-index: 1;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    @media (max-width: 600px) {
+        top: 1.5%;
+        left: 3%;
+    }
+}
+
+.discord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.75em;
+    font-weight: 900;
+    font-family: 'Ubuntu', sans-serif;
+    background: #333;
+    padding: 0.2em 0.8em;
+    border-radius: 0.25em;
+    color: #fff;
+    border: 3px solid #fff;
+    opacity: 0.92;
+    transition: opacity 300ms ease, transform 300ms ease;
+    &:hover {
+        transform: scale(0.98);
+        opacity: 1;
+    }
+    i {
+        padding-left: 0.4em;
+        font-size: 1.25em;
+        @media (max-width: 600px) {
+            font-size: 1em;
+        }
+    }
+    @media (max-width: 600px) {
+        font-size: 1.1em;
+        padding: 0.2em 0.6em;
+    }
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 60%;
+    min-height: 65vh;
+    margin-top: 35vh;
+    padding-left: 0;
+    margin-left: 0;
+
+    @media (max-width: 900px) {
+        max-width: 65%;
+    }
+    @media (max-width: 600px) {
+        max-width: 85%;
+        min-height: 55vh;
+        margin-top: 45vh;
+    }
+    span {
+        line-height: 1.5;
+        font-size: 0.75em;
+    }
+    h2 {
+        font-size: clamp(0.75em, 3vw, 1.5em);
+        color: whitesmoke;
+        line-height: 1;
+        @media (max-width: 600px) {
+            padding-right: 85px;
+        }
+    }
+}
+
+.landing h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: clamp(2.75em, 6vw, 3.75em);
+    color: $accent;
+    font-weight: bold;
+    padding: 0.25em;
+    text-shadow: 2px 3px 8px rgba(122, 39, 18, 0.805);
+    @media (max-width: 600px) {
+        font-size: 2.5em;
+    }
+}
+
+.btn2 {
+    padding: 1.5em 5em;
+}
+
+.cta {
+    display: flex;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(2em, 4.5vw, 2.2em);
+    min-width: 282px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    background: #111;
+    padding: 0.25em 0.75em;
+    margin-bottom: 1em;
+    border-radius: 0.25em;
+    color: whitesmoke;
+    transition: color 200ms ease;
+    @media (max-width: 600px) {
+        font-size: 1.5em;
+        line-height: 1.25;
+        min-width: 200px;
+    }
+}
+
+.cta::after {
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 105%;
+    left: -4px;
+    top: -3px;
+    border-radius: 0.25em;
+    background: linear-gradient(
+        45deg,
+        rgb(141, 31, 4),
+        maroon,
+        brown,
+        rgb(129, 56, 4),
+        darkred,
+        firebrick
+    );
+    z-index: -10;
+    filter: blur(8px);
+}
+
+.cta:hover {
+    color: $accent;
+}

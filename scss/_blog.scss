@@ -1,0 +1,70 @@
+$accent: #8d2609;
+
+#blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 600px) {
+        padding: 1em 1em;
+    }
+}
+
+#blog span {
+    color: $accent;
+}
+
+#blog h2 {
+    max-width: 45ch;
+    line-height: 1.4;
+    @media (max-width: 600px) {
+        line-height: 1.25;
+        font-size: 1.25em;
+        padding: 0.25em 0.25em;
+    }
+}
+
+#blog p {
+    @media (max-width: 600px) {
+        font-size: 0.75em;
+        line-height: 1.4;
+        padding: 0.5em 0.25em;
+    }
+}
+
+.blog {
+    position: relative;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 900;
+    font-family: 'Ubuntu', sans-serif;
+    background: black;
+    padding: 0.5em 1.5em;
+    border-radius: 0.25em;
+    color: whitesmoke;
+    transition: color 200ms ease;
+}
+
+.blog::after {
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 105%;
+    left: -4px;
+    top: -3px;
+    border-radius: 0.25em;
+    background: linear-gradient(
+        45deg,
+        rgb(141, 31, 4),
+        maroon,
+        brown,
+        rgb(129, 56, 4),
+        darkred,
+        firebrick
+    );
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.blog:hover {
+    color: $accent;
+}

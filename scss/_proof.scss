@@ -1,0 +1,92 @@
+article {
+    z-index: -1;
+    padding: 0.5em 0.75em;
+    max-height: 25vh;
+    background: #333;
+    color: whitesmoke;
+    @media (max-width: 1050px) {
+        max-height: 15vh;
+        padding: 0.25em 0.25em;
+    }
+    @media (max-width: 600px) {
+        max-height: 50vh;
+        padding: 0.25em 0.25em;
+    }
+}
+
+article h2 {
+    font-size: 1.25em;
+    line-height: 1.25;
+    padding: 0.25em 0;
+    @media (max-width: 1050px) {
+        font-size: 1em;
+    }
+}
+
+.proof {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    z-index: 0;
+    @media (max-width: 1050px) {
+        gap: 0.3em;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0.1em;
+    }
+}
+
+.expandMoreContent {
+    overflow: hidden;
+    height: 22vh;
+    transition: height 500ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1em;
+    background: #111;
+    box-shadow: 1px 1px 4px whitesmoke;
+    border-radius: 5px;
+    p {
+        font-size: 0.8em;
+    }
+    @media (max-width: 1050px) {
+        height: 13vh;
+        padding: 0.25em 0.25em;
+    }
+    @media (max-width: 600px) {
+        height: 13vh;
+        box-shadow: none;
+    }
+}
+
+.expandMoreContent.expand-active {
+    height: max-content;
+    width: 50vw;
+    z-index: 1;
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.expandMoreHolder {
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.btn-expand-more {
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    font-size: 0.85em;
+    border-radius: 5px;
+    padding: 1px 10px;
+    display: inline-block;
+    transition: 200ms ease-in-out;
+}
+
+.btn-expand-more:hover {
+    background: whitesmoke;
+    color: #111;
+}

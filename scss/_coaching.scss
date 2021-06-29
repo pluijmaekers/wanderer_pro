@@ -1,0 +1,34 @@
+#colored {
+    color: #8d2609;
+}
+
+#cb4,
+#cb5,
+#cb6,
+#cb7,
+#cb8,
+#cb9 {
+    color: #333;
+    border-color: #333;
+}
+
+@media (max-width: 600px) {
+    #coaching {
+        padding: 1em 0.75em;
+        h2 {
+            line-height: 1.25;
+            font-size: 1.25em;
+            padding: 0.25em 0.25em;
+        }
+        p {
+            font-size: 0.75em;
+            line-height: 1.4;
+            padding: 0.5em 0.25em;
+        }
+        h3 {
+            line-height: 1.25;
+            font-size: 1.25em;
+            padding: 0.25em 0.25em;
+        }
+    }
+}

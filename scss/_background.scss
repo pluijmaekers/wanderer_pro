@@ -1,0 +1,68 @@
+.bg {
+    position: relative;
+    opacity: 0.97;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*
+     fixed = parallax
+     scroll = normal for mobile
+    */
+    background-attachment: fixed;
+    @media (max-width: 600px) {
+        background-attachment: scroll;
+    }
+}
+
+.landing {
+    background-image: url('../img/poker-bg.png');
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.journey {
+    display: flex;
+    z-index: 0;
+    background-image: url('../img/lights.jpg');
+    height: 100vh;
+    @media (max-width: 1050px) {
+        max-height: 100px;
+    }
+}
+
+.container {
+    z-index: 0;
+    display: flex;
+    background-image: url('../img/matrix.jpg');
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/blog.jpg');
+    min-height: 55vh;
+    z-index: 0;
+}
+
+#contact {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
+}
+
+#contact-link {
+    z-index: -1;
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
+}

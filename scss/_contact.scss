@@ -1,0 +1,157 @@
+.btn-contact {
+    padding-bottom: 1em;
+    position: relative;
+    z-index: 0;
+}
+
+#contact h3 {
+    font-size: 1em;
+    padding-bottom: 1em;
+    @media (max-width: 600px) {
+        line-height: 1.25;
+        font-size: 0.9em;
+        padding: 0.25em;
+        margin-bottom: 20px;
+    }
+}
+
+p {
+    @media (max-width: 600px) {
+        font-size: 0.75em;
+        line-height: 1.4;
+        padding: 0.5em 0.25em;
+    }
+}
+
+.form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 87vh;
+    width: 100%;
+    z-index: 0;
+}
+
+.contactInfo {
+    width: 20%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    background: #333;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 4px 8px 12px black;
+    img {
+        width: 75%;
+    }
+    @media (max-width: 1050px) {
+        height: 80vh;
+        box-shadow: none;
+    }
+    @media (max-width: 760px) {
+        display: none;
+    }
+}
+
+.contactForm {
+    height: 80vh;
+    width: 75%;
+    background: whitesmoke;
+    border-radius: 5px;
+    z-index: 0;
+    @media (max-width: 1050px) {
+        width: 100%;
+    }
+    @media (max-width: 760px) {
+        height: 90vh;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 80vh;
+        left: 16%;
+        border-radius: 5px;
+        background: whitesmoke;
+        z-index: 0;
+        @media (max-width: 1050px) {
+            display: none;
+        }
+    }
+    h2 {
+        margin: 20px;
+        color: #8d2609;
+        @media (max-width: 760px) {
+            font-size: 1.25em;
+        }
+    }
+}
+
+.formBox {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    width: 90%;
+    z-index: 0;
+    .inputBox.w50 {
+        width: 50%;
+        margin-bottom: 20px;
+        @media (max-width: 760px) {
+            width: 100%;
+        }
+    }
+    .inputBox.w100 {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .inputBox input,
+    textarea {
+        width: 100%;
+        padding: 4px 0;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #777;
+        background: whitesmoke;
+    }
+    textarea {
+        height: 160px;
+    }
+    .inputBox {
+        z-index: 0;
+        span {
+            position: absolute;
+            left: 50px;
+            padding: 4px 0;
+            pointer-events: none;
+            font-size: 18px;
+            transition: 300ms;
+        }
+        input:focus ~ span,
+        input:valid ~ span,
+        textarea:focus ~ span {
+            transform: translateY(-22px);
+            font-size: 14px;
+            letter-spacing: 1px;
+            opacity: 0.75;
+        }
+        input[type='submit'] {
+            position: relative;
+            cursor: pointer;
+            color: whitesmoke;
+            font-size: 22px;
+            background: #8d2609;
+            border: none;
+            max-width: 150px;
+            padding: 12px;
+            transition: 300ms ease;
+            border-radius: 5px;
+            &:hover {
+                transform: scale(1.04);
+            }
+        }
+    }
+}
